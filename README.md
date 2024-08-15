@@ -49,7 +49,11 @@ Installing dashboard: -
 
 <br>
 Here is a screenshot of the dashboard:<br>
+
 ![overall_usage](https://github.com/user-attachments/assets/0b2be83a-4c43-47ba-8366-97f8b04a3604)
+
 ![system_usage](https://github.com/user-attachments/assets/3c6be5c2-c5b0-4bd5-8180-912391162946)
+
 ![docker_usage_1](https://github.com/user-attachments/assets/656a3c29-c44d-40a0-a280-0253325d80b5)
+
 ![docker_usage_2](https://github.com/user-attachments/assets/05bc3e81-f5b8-4a82-898c-7b2726e5e5e9)
