@@ -4,10 +4,10 @@ This repository provides a comprehensive monitoring solution for Host machines a
 ## Prerequisites
 Before you begin, ensure you have the following installed:
 - Docker: [Install Docker](https://docs.docker.com/engine/install)
-- Docker Compose:[Install Docker Compose](https://docs.docker.com/compose/install)
+- Docker Compose: [Install Docker Compose](https://docs.docker.com/compose/install)
 
 ## Installation
-Telegraf is used as a metrics data collector, while Prometheus collects metrics from the data collector and stores them in its database. Grafana is configured to query metrics using([PrompQL](https://prometheus.io/docs/prometheus/latest/querying/basics), with the results rendered on the dashboard.
+Telegraf is used as a metrics data collector, while Prometheus collects metrics from the data collector and stores them in its database. Grafana is configured to query metrics using([PrompQL](https://prometheus.io/docs/prometheus/latest/querying/basics)), with the results rendered on the dashboard.
 
 To deploy monitoring containers:
 ```bash
@@ -19,13 +19,13 @@ docker compose --profile monitor up -d
 Alternatively, you can deploy the data collector (i.e., Telegraf) on the target machine that needs to be monitored, and deploy Prometheus and Grafana on a different machine for metric data storage and dashboard visualization.
 - To deploy Telegraf(on a target machine)<br>
 ```bash
+echo DOCKER_GROUP_ID=$(stat -c '%g' /var/run/docker.sock) > .env
 docker compose --profile telegraf up -d
 ```
 - To deploy Prometheus and Grafana(on a different machine)<br>
 Since, Telegraf is deployed to a different machine, you need to set `TELEGRAF_HOST`<br>
 ```bash
 export TELEGRAF_HOST=<ip of the target machine>:9273
-echo DOCKER_GROUP_ID=$(stat -c '%g' /var/run/docker.sock) > .env
 envsubst < prometheus.template.yml > prometheus.yml
 docker compose --profile grafana-prometheus up -d
 ```
