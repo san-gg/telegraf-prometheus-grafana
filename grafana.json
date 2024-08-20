@@ -70,8 +70,10 @@
       }
     ]
   },
+  "description": "This dashboard provides a unified view of both host system and Docker container metrics. Use this dashboard to monitor and analyze overall system health and container performance in one place.",
   "editable": true,
   "fiscalYearStartMonth": 0,
+  "gnetId": 21705,
   "graphTooltip": 0,
   "id": null,
   "links": [],
@@ -1164,7 +1166,7 @@
             "axisBorderShow": false,
             "axisCenteredZero": true,
             "axisColorMode": "text",
-            "axisLabel": "Disk Write          Disk Read",
+            "axisLabel": "Disk Read          Disk Write",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
@@ -2036,8 +2038,8 @@
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "Host System and Docker Container Metrics Dashboard",
+  "title": "Host System and Docker Container Metrics",
   "uid": "cdui3uxlyc9a8c",
-  "version": 53,
+  "version": 2,
   "weekStart": ""
 }
