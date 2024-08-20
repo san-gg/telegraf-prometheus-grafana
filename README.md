@@ -36,15 +36,16 @@ docker compose ps
 ## Configuration
 Grafana dashboard can be accessed by navigating to `http://<IP or localhost>:3000`. The default username and password are `admin`.<br><br>
 Installing dashboard: -
-- Navigate to 'Data Sources' from the panel.
+- Navigate to `connection > Data Sources` from the panel.
 - Add Prometheus as a data source.
 - Specify `http://prometheus:9090` in the URL.
 - Test the connection.
 - Navigate to the Dashboard from the panel.
 - Click on 'Create New Dashboard' and then 'Import Dashboard'.
-- Visit [grafana.com Dashboard](https://grafana.com/grafana/dashboards/21705-host-system-and-docker-container-metrics-dashboard/).
+- Visit [grafana.com Dashboard](https://grafana.com/grafana/dashboards/21740-host-system-and-docker-container-metrics).
 - Click on the `Copy ID to Clipboard` button.
-- Navigate to the `Import` page in Grafana and paste the ID into the `Import via grafana.com` field.
+- Navigate to the `Import` page in Grafana and paste the ID into the `Grafana.com dashboard URL or ID` field.
+- Select Datasource as prometheus
 - Click on the `Load` button, then `Import` button.
 
 <br>
@@ -52,7 +53,7 @@ Here is a screenshot of the dashboard:<br>
 
 ![overall_usage](https://github.com/user-attachments/assets/0b2be83a-4c43-47ba-8366-97f8b04a3604)
 
-![system_usage](https://github.com/user-attachments/assets/3c6be5c2-c5b0-4bd5-8180-912391162946)
+![system_usage](https://github.com/user-attachments/assets/ecd89616-6222-41b1-8cc3-b6144a4f4251)
 
 ![docker_usage_1](https://github.com/user-attachments/assets/656a3c29-c44d-40a0-a280-0253325d80b5)
 
